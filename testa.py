@@ -1,8 +1,8 @@
-from math import sin
+import numpy
 
 
-def addd(a):
-    return sin(a)
 
-class Mia(object):
-    pass
+bb='haha'
+
+def add():
+    a = numpy.mat([1])

@@ -79,5 +79,15 @@ def extract(str_temp):
     for i in range(1,6):
         zb_val[i] = float(zb_str[i])
 
+
+
+    # get the block N number
+    for i in range(1,len(strr)):
+        if ord(strr[i]) < 48  or  ord(strr[i]) > 57:
+            break
+    name = strr[0:i]
+
+
+
     #print(zb_val)
-    return zb_val
+    return zb_val, name
