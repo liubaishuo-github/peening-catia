@@ -35,11 +35,12 @@ def transf(x, y, z, a_degree, b_degree):
     axis_trans = mat([-table_x_offset, 0, table_z_offset]).T
     point_table = point_after + axis_trans
 
-    print(point_table)
+    #print(point_table)
 
 
 
     vector = rot_z(b) * rot_y(a) * mat([1, 0, 0]).T
-    print(vector)
-
-    return point_table, vector
+    #print(vector)
+    print(x, y, z, a_degree, b_degree)
+    return point_table[0,0], point_table[1,0], point_table[2,0],\
+            vector[0,0], vector[1,0], vector[2,0]
