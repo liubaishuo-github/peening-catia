@@ -82,11 +82,13 @@ def extract(str_temp):
 
 
     # get the block N number
+    '''
     for i in range(1,len(strr)):
         if ord(strr[i]) < 48  or  ord(strr[i]) > 57:
             break
     name = strr[0:i]
-
+    '''
+    name = str_temp
 
 
     #print(zb_val)

@@ -1,26 +1,18 @@
-import win32com.client
-CATIA = win32com.client.Dispatch('catia.application')
-oPart = CATIA.ActiveDocument.part
-#myHBody = oPart.HybridBodies.Add()
-#referencebody = oPart.CreateReferenceFromObject(myHBody)
-#oPart.HybridShapeFactory.ChangeFeatureName(referencebody, "GeometryFromExcel")
+str_temp = 's(1)f43f(sf1(shf))djio(s132(223tg)s32(23)233)haha'
 
-myPBody = oPart.HybridBodies.Item("point")
-Point = oPart.HybridShapeFactory.\
-                        AddNewPointCoord(1, 2, 3)
-#myPBody.AppendHybridShape(Point)
+stack = ''
+ph = 0
 
-Dir = oPart.HybridShapeFactory.\
-            AddNewDirectionByCoord(1, -1, 4)
+for w in str_temp:
+    if w == "(":
+        ph = ph + 1
+        continue
+    elif w == ")":
+        ph = ph - 1
+        continue
 
-
-Line = oPart.HybridShapeFactory.\
-           AddNewLinePtDir(Point, Dir, 0, 300, False)
-
-myPBody.AppendHybridShape(Line)
-
-ref_line = oPart.CreateReferenceFromObject(Line)
-oPart.HybridShapeFactory.ChangeFeatureName(ref_line, "haha")
+    if ph == 0:
+        stack = stack + w
 
 
-oPart.Update()
+print(stack)

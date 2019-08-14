@@ -16,7 +16,7 @@ def cat_op(x, y, z, di, dj, dk, name, myPBody, oPart):
 
     #myPBody = oPart.HybridBodies.Item("GeometryFromNC")
     Point = oPart.HybridShapeFactory.\
-                            AddNewPointCoord(x, y, z)
+                    AddNewPointCoord(x * 25.4, y * 25.4, z * 25.4)
 
     Dir = oPart.HybridShapeFactory.\
                 AddNewDirectionByCoord(di, dj, dk)

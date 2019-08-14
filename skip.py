@@ -14,14 +14,29 @@ def skip(txt):
         print("小括号数量不对,请检查：")
         print(str_temp)
         sys.exit()
-
+    '''
     while l_paren > 0:
         l_str = str_temp[0 : str_temp.find('(')]
         r_str = str_temp[str_temp.find(')') + 1 : ]
         str_temp = l_str + r_str
         l_paren = str_temp.count("(")
+    '''
 
-    str = str_temp
+    str = ''
+    ph = 0
+
+    for w in str_temp:
+        if w == "(":
+            ph = ph + 1
+            continue
+        elif w == ")":
+            ph = ph - 1
+            continue
+
+        if ph == 0:
+            str = str + w
+
+
 
     str = str.strip()
 
