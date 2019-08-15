@@ -22,10 +22,10 @@ def rot_z(de):
 
 def transf(x, y, z, a_degree, b_degree):
     a, b = radians(a_degree), radians(b_degree)
-    nozzle_length = 3
-    nozzle_offset = 7
+    nozzle_length = 3.63
+    nozzle_offset = 7.63
     table_x_offset = 30
-    table_z_offset = 48
+    table_z_offset = 54.375
 
     point_init = mat([nozzle_length, 0 , -nozzle_offset]).T
 
