@@ -1,11 +1,13 @@
+﻿import sys
+
 def extract(str_temp):
 
     l_paren = str_temp.count("[")
     r_paren = str_temp.count("]")
 
     if l_paren != r_paren:
-        print("方括号数量不对,请检查：")
-        print(str_temp)
+        print("bracket quantity error, please check:")
+        print(str_temp + '\n')
         sys.exit()
 
     strr = str_temp

@@ -1,4 +1,4 @@
-import sys
+﻿import sys
 
 
 
@@ -11,8 +11,8 @@ def skip(txt):
     r_paren = str_temp.count(")")
 
     if l_paren != r_paren or l_paren > 2 or r_paren > 2 :
-        print("小括号数量不对,请检查：")
-        print(str_temp)
+        print("parentheses quantity error, please check:")
+        print(str_temp + '\n')
         sys.exit()
     '''
     while l_paren > 0:
